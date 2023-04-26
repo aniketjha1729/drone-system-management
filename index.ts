@@ -1,6 +1,8 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import { routes } from "./routes";
+
 dotenv.config();
 
 const app: Express = express();
@@ -13,6 +15,8 @@ mongoose
 app.get("/test", (req: Request, res: Response) => {
   res.send("Express Server running....");
 });
+
+app.use("/api/user", routes);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);

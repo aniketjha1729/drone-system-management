@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const routes_1 = require("./routes");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT;
@@ -15,6 +16,7 @@ mongoose_1.default
 app.get("/test", (req, res) => {
     res.send("Express Server running....");
 });
+app.use("/api/user", routes_1.routes);
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
