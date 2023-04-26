@@ -11,3 +11,7 @@ exports.userRoute.get("/test", (req, res) => {
         Message: "User Routes Working",
     });
 });
+exports.userRoute.post("/signin", (req, res) => {
+    const { email, password } = req.body;
+    res.send({ email: email, password: password });
+});

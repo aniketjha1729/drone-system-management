@@ -1,11 +1,12 @@
-import express, { Express, Request, Response } from "express";
+import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { routes } from "./routes";
+import { Application } from "express";
 
 dotenv.config();
 
-const app: Express = express();
+const app: Application = express();
 const port = process.env.PORT;
 
 mongoose
@@ -16,6 +17,7 @@ app.get("/test", (req: Request, res: Response) => {
   res.send("Express Server running....");
 });
 
+app.use(express.json());
 app.use("/api/user", routes);
 
 app.listen(port, () => {
