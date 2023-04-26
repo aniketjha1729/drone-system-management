@@ -1,4 +1,5 @@
 import express from "express";
+import { singUp } from "../controller/user";
 export const userRoute = express.Router();
 
 userRoute.get("/test", (req, res) => {
@@ -7,7 +8,4 @@ userRoute.get("/test", (req, res) => {
   });
 });
 
-userRoute.post("/signin", (req, res) => {
-  const { email, password } = req.body;
-  res.send({ email: email, password: password });
-});
+userRoute.post("/signup", singUp);

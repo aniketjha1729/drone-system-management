@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { routes } from "./routes";
 import { Application } from "express";
-
 dotenv.config();
 
 const app: Application = express();
