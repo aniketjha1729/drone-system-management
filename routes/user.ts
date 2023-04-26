@@ -1,5 +1,5 @@
 import express from "express";
-import { singUp } from "../controller/user";
+import { signIn, signUp } from "../controller/user";
 export const userRoute = express.Router();
 
 userRoute.get("/test", (req, res) => {
@@ -8,4 +8,5 @@ userRoute.get("/test", (req, res) => {
   });
 });
 
-userRoute.post("/signup", singUp);
+userRoute.post("/signup", signUp);
+userRoute.post("/signin", signIn);

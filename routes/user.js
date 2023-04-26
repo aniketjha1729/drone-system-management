@@ -12,4 +12,5 @@ exports.userRoute.get("/test", (req, res) => {
         Message: "User Routes Working",
     });
 });
-exports.userRoute.post("/signup", user_1.singUp);
+exports.userRoute.post("/signup", user_1.signUp);
+exports.userRoute.post("/signin", user_1.signIn);
