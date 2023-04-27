@@ -11,7 +11,7 @@ Api developed with express for done management.
 ## Steps to init project
 
 1.  First install all dependencies with npm:
-    `npm install` in the root directory && `npm install` in the server directory.
+    `npm install` in the root directory
 2.  Create a `.env` file and insert the following code. Replace values with yours!!
 
     ```javascript
