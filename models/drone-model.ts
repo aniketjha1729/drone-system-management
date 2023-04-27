@@ -9,6 +9,10 @@ const droneSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
+    site: {
+      type: Schema.Types.ObjectId,
+      ref: "Site",
+    },
   },
   { timestamps: true }
 );
