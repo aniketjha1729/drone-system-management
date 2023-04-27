@@ -4,6 +4,7 @@ import {
   addMissionToSite,
   createSites,
   deleteDrone,
+  deleteMission,
   deleteSite,
   getAllSites,
   getDrones,
@@ -35,4 +36,4 @@ siteRoute.put("/:siteId/drone/:droneId", isUserAuth, addDroneToSite);
 siteRoute.delete("/:siteId/drone/:droneId", isUserAuth, deleteDrone);
 
 siteRoute.put("/:siteId/mission/:missionId", isUserAuth, addMissionToSite);
-siteRoute.delete("/:siteId/drone/:missionId", isUserAuth, deleteDrone);
+siteRoute.delete("/:siteId/mission/:missionId", isUserAuth, deleteMission);

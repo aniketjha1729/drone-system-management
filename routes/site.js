@@ -23,4 +23,4 @@ exports.siteRoute.delete("/:siteId", auth_1.isUserAuth, site_1.deleteSite);
 exports.siteRoute.put("/:siteId/drone/:droneId", auth_1.isUserAuth, site_1.addDroneToSite);
 exports.siteRoute.delete("/:siteId/drone/:droneId", auth_1.isUserAuth, site_1.deleteDrone);
 exports.siteRoute.put("/:siteId/mission/:missionId", auth_1.isUserAuth, site_1.addMissionToSite);
-exports.siteRoute.delete("/:siteId/drone/:missionId", auth_1.isUserAuth, site_1.deleteDrone);
+exports.siteRoute.delete("/:siteId/mission/:missionId", auth_1.isUserAuth, site_1.deleteMission);
