@@ -8,6 +8,12 @@ const siteSchema = new Schema(
       longitude: { type: String, required: true },
     },
     created_by: { type: Schema.Types.ObjectId, ref: "User" },
+    drones: [
+      { type: Schema.Types.ObjectId, ref: "Drone" }
+    ],
+    missions: [
+      { type: Schema.Types.ObjectId, ref: "Mission" }
+    ]
   },
   { timestamps: true }
 );

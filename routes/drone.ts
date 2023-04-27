@@ -9,5 +9,5 @@ droneRoute.get("/test", (req, res) => {
   });
 });
 
-droneRoute.post("/createdrone", isUserAuth, createDrone);
-droneRoute.get("/allDrones", isUserAuth, getAllDrones);
+droneRoute.post("/", isUserAuth, createDrone);
+droneRoute.get("/", isUserAuth, getAllDrones);

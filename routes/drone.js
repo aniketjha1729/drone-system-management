@@ -13,5 +13,5 @@ exports.droneRoute.get("/test", (req, res) => {
         Message: "Drone Routes Working",
     });
 });
-exports.droneRoute.post("/createdrone", auth_1.isUserAuth, drone_1.createDrone);
-exports.droneRoute.get("/allDrones", auth_1.isUserAuth, drone_1.getAllDrones);
+exports.droneRoute.post("/", auth_1.isUserAuth, drone_1.createDrone);
+exports.droneRoute.get("/", auth_1.isUserAuth, drone_1.getAllDrones);

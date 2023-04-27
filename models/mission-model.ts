@@ -12,6 +12,10 @@ const missionSchema = new Schema(
         lng: { type: Number, required: true },
       },
     ],
+    created_by: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
     site: {
       type: Schema.Types.ObjectId,
       ref: "Site",

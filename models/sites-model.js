@@ -8,6 +8,12 @@ const siteSchema = new mongoose_1.Schema({
         longitude: { type: String, required: true },
     },
     created_by: { type: mongoose_1.Schema.Types.ObjectId, ref: "User" },
+    drones: [
+        { type: mongoose_1.Schema.Types.ObjectId, ref: "Drone" }
+    ],
+    missions: [
+        { type: mongoose_1.Schema.Types.ObjectId, ref: "Mission" }
+    ]
 }, { timestamps: true });
 const Site = (0, mongoose_1.model)("Site", siteSchema);
 exports.default = Site;
